@@ -17,6 +17,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -41,9 +42,13 @@ fun App() {
                 value = name,
                 onValueChange = { name = it }
             )
-            Spacer(modifier = Modifier.height(3.dp))
+            Spacer(modifier = Modifier.height(28.dp))
             if (name.isNotEmpty()) {
-                Text("Hola " + name)
+                Text("Hola " + name, fontSize = 22.sp)
+            }
+            Spacer(modifier = Modifier.height(58.dp))
+            AnimatedVisibility (name.equals("Enrique")) {
+                Text("Welcome: " + name, fontSize = 22.sp)
             }
         }
 
