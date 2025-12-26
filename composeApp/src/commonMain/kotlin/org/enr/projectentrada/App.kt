@@ -26,7 +26,7 @@ fun App() {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         //Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-        var name: String=""
+        var name: String by remember { mutableStateOf("") }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
              TextField(
                 value = name,
